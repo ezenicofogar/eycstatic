@@ -1,0 +1,86 @@
+/* 
+ * HEADER SECTION
+*/
+
+@layer components {
+
+    #header {
+        position: fixed;
+        display: grid;
+        width: 100lvw;
+        grid-template-rows: 6rem 1fr;
+        overflow: hidden;
+        
+        transition-property: height transform filter background-color;
+        transition-timing-function: var(--default-transition-timing-function);
+        transition-duration: var(--default-transition-duration);
+    }
+    #header:not(.opened) {
+        height: 6rem;
+        backdrop-filter: blur(4px);
+        background-color: color-mix(in oklab, var(--color-base-800) 90%, transparent);
+    }
+    #header.opened {
+        height: 100lvh;
+        backdrop-filter: blur(16px);
+        background-color: var(--color-base-800);
+    }
+    #header.hide:not(.opened) {
+        transform: translateY(-6rem);
+    }
+
+    #header #navbar {
+        height: 6rem;
+    }
+    
+    #header #menu {
+        transition-property: opacity;
+        transition-timing-function: var(--default-transition-timing-function);
+        transition-duration: var(--default-transition-duration);
+    }
+    #header #menu svg {
+        height: 1em;
+        width: 1em;
+    }
+    #header:not(.opened) > #menu {
+        opacity: 0;
+    }
+    #header #menu-button-icon-1,
+    #header #menu-button-icon-2 {
+        transition-property: transform;
+        transition-timing-function: var(--default-transition-timing-function);
+        transition-duration: var(--default-transition-duration);
+    }
+    #header:not(.opened) #menu-button:hover #menu-button-icon-1 {
+        transform: translateY(-4px) translateX(-4px);
+    }
+    #header:not(.opened) #menu-button:hover #menu-button-icon-2 {
+        transform: translateY(4px) translateX(4px);
+    }
+    #header:not(.opened) #menu-button-icon-1 {
+        transform: translateY(-4px);
+    }
+    #header:not(.opened) #menu-button-icon-2 {
+        transform: translateY(4px);
+    }
+    #header.opened #menu-button-icon-1 {
+        transform: rotate(135deg);
+    }
+    #header.opened #menu-button-icon-2 {
+        transform: rotate(-135deg);
+    }
+    
+    #header .text-link {
+        @apply cursor-pointer;
+
+        transition-property: letter-spacing transform;
+        transition-timing-function: var(--default-transition-timing-function);
+        transition-duration: var(--default-transition-duration);
+    }
+    #header .text-link:hover {
+        @media (width >= 64rem /* 1024px */) {
+            letter-spacing: 0.25em;
+            transform: translateX(0.125em);
+        }
+    }
+}

@@ -1,0 +1,433 @@
+---
+layout: site.html
+---
+
+
+
+<section id="inicio" class="text-base-50 pointer-events-none">
+    <div class="absolute w-lvw h-lvh flex flex-col justify-end">
+        <div class="px-responsive pb-10 flex justify-between text-xl font-light uppercase">
+            <p>
+                Scroll
+                <svg class="h-[1em] w-[1em] -translate-y-0.5 scale-105 inline" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 7v14" />
+                    <path d="M9 18l3 3l3 -3" />
+                    <path d="M12 7a2 2 0 1 0 0 -4a2 2 0 0 0 0 4" />
+                </svg>
+            </p>
+            <p class="max-lg:hidden">
+                <svg class="h-[1em] w-[1em] -translate-y-0.5 scale-105 inline" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 16l2 -6l6 -2l-2 6l-6 2" />
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M12 3l0 2" />
+                    <path d="M12 19l0 2" />
+                    <path d="M3 12l2 0" />
+                    <path d="M19 12l2 0" />
+                </svg>
+                Chaco, Argentina
+            </p>
+        </div>
+    </div>
+    <div id="inicio-title-container" class="absolute w-lvw h-lvh z-10 flex justify-center items-center px-[10vw] py-28">
+        <p class="text-center text-5xl lg:text-7xl font-semibold text-shadow-lg uppercase">
+            Construimos tu visión con solidez y excelencia
+        </p>
+    </div>
+    <div id="inicio-media-container" class="relative z-50 w-lvw h-lvh">
+        <video class="relative w-full h-full object-cover" autoplay muted loop preload="auto" poster="poster.jpg">
+            <source src="/static/video/hero.av1.mp4" type='video/webm; codecs="av01.0.05M.08"' />
+            <source src="/static/video/hero.h264.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+            Tu navegador no soporta HTML5 video.
+        </video>
+    </div>
+</section>
+<script>
+    (() => {
+        const imc = document.getElementById("inicio-media-container");
+        imc.addEventListener("animationend", () => {
+            imc.classList.remove("z-50");
+        })
+    })()
+</script>
+
+
+
+<section id="construccion" class="relative bg-base-50 text-base-800 w-lvw min-h-lvh">
+    <div class="text-xl px-responsive py-10">
+        <p>#construcción</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-end px-responsive">
+        <div class="flex flex-col items-start gap-8 uppercase py-12 order-2 lg:order-1">
+            <p class="text-3xl lg:text-5xl font-medium">
+                Ejecutamos obras civiles y proyectos llave en mano, garantizando orden, limpieza y
+                transparencia
+            </p>
+            <a class="btn-black text-2xl font-medium px-5 py-4 rounded-lg" href="/#contacto">
+                Contactanos
+            </a>
+        </div>
+        <div class="order-1 lg:order-2">
+            <img class="w-full object-contain" src="/static/img/construction.png" alt="">
+        </div>
+    </div>
+    <div class="pl-responsive py-10">
+        <div class="grid grid-cols-[2rem_1fr] lg:grid-cols-[3rem_1fr] h-120 w-full">
+            <div class="flex flex-col justify-between items-start">
+                <svg class="w-8 lg:w-12 h-8 lg:h-12 -translate-x-4 -translate-y-4 lg:-translate-x-6 lg:-translate-y-6"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 5l0 14" />
+                    <path d="M5 12l14 0" />
+                </svg>
+                <svg class="w-8 lg:w-12 h-8 lg:h-12 -translate-x-4  translate-y-4 lg:-translate-x-6  lg:translate-y-6"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 5l0 14" />
+                    <path d="M5 12l14 0" />
+                </svg>
+            </div>
+            <div class="relative overflow-hidden h-full">
+                <div class="basic-carousel h-full flex">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/gonzz-ndG1YdTQBOk-unsplash.jpg" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/greg-rosenke-oHly4Tu-vQ4-unsplash.jpg" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/ian-UqRhvh0llF8-unsplash.jpg" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/tanya-swindells-0armZKoAcEU-unsplash.jpg" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/voyager-wang-5zCbrGCvtsA-unsplash.jpg" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/samantha-fortney-VqXio0EvV1A-unsplash.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="px-responsive pb-10 grid grid-cols-[1fr_4rem] lg:grid-cols-[12rem_1fr] items-end uppercase">
+        <p class="text-xl font-light hidden lg:block">
+            Scroll
+            <svg class="h-[1em] w-[1em] -translate-y-0.5 scale-105 inline" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 7v14" />
+                <path d="M9 18l3 3l3 -3" />
+                <path d="M12 7a2 2 0 1 0 0 -4a2 2 0 0 0 0 4" />
+            </svg>
+        </p>
+        <p class="text-2xl lg:text-3xl font-light max-w-200">
+            Transformamos materiales en hogares duraderos. Gestionamos cada etapa de la obra, asegurando una inversión
+            segura y resultados concretos.
+        </p>
+    </div>
+</section>
+
+
+
+<section id="metalurgica" class="relative overflow-hidden text-base-50 w-lvw min-h-lvh">
+    <!-- <img class="absolute -z-10 w-full aspect-2/1 object-cover object-bottom scale-125 -translate-y-[50%] -rotate-12"
+        src="/static/img/metalurgica.png" alt=""
+        style="mask-image: linear-gradient(white 90%, black); mask-mode: luminance;"> -->
+    <video class="absolute -z-10 w-full h-150 object-cover object-bottom" autoplay muted loop preload="auto"
+        poster="poster.jpg" style="mask-image: linear-gradient(white 90%, black); mask-mode: luminance;">
+        <source src="/static/video/metalurgica.av1.webm" type='video/webm; codecs="av01.0.05M.08"' />
+        <!-- <source src="/static/video/hero.h264.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' /> -->
+        Your browser does not support the HTML5 video tag.
+    </video>
+    <div class="text-xl px-responsive py-10 text-end">
+        <p>#metalúrgica</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-end px-responsive text-end">
+        <div class="h-50 lg:h-140">
+        </div>
+        <div class="flex flex-col items-end gap-8 uppercase py-12">
+            <p class="text-3xl lg:text-5xl font-medium text-shadow-lg">
+                Fabricación y montaje de estructuras metálicas, tinglados y naves industriales
+            </p>
+            <a class="btn-black text-2xl font-medium px-5 py-4 rounded-lg" href="/#contacto">
+                Contactanos
+            </a>
+        </div>
+    </div>
+    <div class="pr-responsive py-10">
+        <div class="grid grid-cols-[1fr_2rem] lg:grid-cols-[1fr_3rem] h-120 w-full">
+            <div class="relative overflow-hidden h-full">
+                <div class="basic-carousel h-full flex">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/ivan-henao-JdAaF_cN71k-unsplash.jpg" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/daniel-fazio-mnHXMWbcnhE-unsplash.jpg" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/liam-maart-MlYCn6yVzA4-unsplash.jpg" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/ivan-henao-2DK-CP_WAuw-unsplash.jpg" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover"
+                        src="/static/img/temp/zoshua-colah-AdqTYojtOnc-unsplash.jpg" alt="">
+                </div>
+            </div>
+            <div class="flex flex-col justify-between items-end">
+                <svg class="w-8 lg:w-12 h-8 lg:h-12 translate-x-4 -translate-y-4 lg:translate-x-6 lg:-translate-y-6"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 5l0 14" />
+                    <path d="M5 12l14 0" />
+                </svg>
+                <svg class="w-8 lg:w-12 h-8 lg:h-12 translate-x-4  translate-y-4 lg:translate-x-6  lg:translate-y-6"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 5l0 14" />
+                    <path d="M5 12l14 0" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="px-responsive pb-10 grid grid-cols-1 max-lg:items-end gap-4 uppercase">
+        <p class="text-2xl lg:text-3xl font-light max-w-240 max-lg:text-end">
+            Soluciones metálicas a medida con fabricación propia. Optimizamos costos y tiempos de montaje, brindando
+            estructuras robustas ideales para grandes superficies, depósitos y comercios.
+        </p>
+        <p class="text-xl font-light hidden lg:block">
+            Scroll
+            <svg class="h-[1em] w-[1em] -translate-y-0.5 scale-105 inline" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 7v14" />
+                <path d="M9 18l3 3l3 -3" />
+                <path d="M12 7a2 2 0 1 0 0 -4a2 2 0 0 0 0 4" />
+            </svg>
+        </p>
+    </div>
+</section>
+
+
+
+<section id="arquitectura" class="relative bg-base-50 text-base-800 w-lvw min-h-lvh">
+    <div class="text-xl px-responsive py-10">
+        <p>#arquitectura</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-end px-responsive">
+        <div class="flex flex-col items-start gap-8 uppercase py-12 order-2 lg:order-1">
+            <p class="text-3xl lg:text-5xl font-medium">
+                Enzo García
+            </p>
+            <a class="btn-black text-2xl font-medium px-5 py-4 rounded-lg" href="/#contacto">
+                Contactanos
+            </a>
+        </div>
+        <div class="order-1 lg:order-2">
+            <img class="w-full object-cover aspect-video"
+                src="/static/img/temp/amsterdam-city-archives-kl5hdStOjFk-unsplash.jpg" alt="">
+        </div>
+    </div>
+    <div class="pl-responsive py-10">
+        <div class="grid grid-cols-[2rem_1fr] lg:grid-cols-[3rem_1fr] h-120 w-full">
+            <div class="flex flex-col justify-between items-start">
+                <svg class="w-8 lg:w-12 h-8 lg:h-12 -translate-x-4 -translate-y-4 lg:-translate-x-6 lg:-translate-y-6"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 5l0 14" />
+                    <path d="M5 12l14 0" />
+                </svg>
+                <svg class="w-8 lg:w-12 h-8 lg:h-12 -translate-x-4  translate-y-4 lg:-translate-x-6  lg:translate-y-6"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 5l0 14" />
+                    <path d="M5 12l14 0" />
+                </svg>
+            </div>
+            <div class="relative overflow-hidden h-full">
+                <div class="basic-carousel h-full flex">
+                    <img class="h-full pr-4 aspect-square object-cover" src="/static/img/construction.png" alt="">
+                    <img class="h-full pr-4 aspect-square object-cover grayscale-100" src="/static/img/construction.png"
+                        alt="">
+                    <img class="h-full pr-4 aspect-square object-cover sepia-100" src="/static/img/construction.png"
+                        alt="">
+                    <img class="h-full pr-4 aspect-square object-cover invert-100" src="/static/img/construction.png"
+                        alt="">
+                    <img class="h-full pr-4 aspect-square object-cover blur-sm" src="/static/img/construction.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="px-responsive pb-10 grid grid-cols-[1fr_4rem] lg:grid-cols-[12rem_1fr] items-end uppercase">
+        <p class="text-xl font-light hidden lg:block">
+            Scroll
+            <svg class="h-[1em] w-[1em] -translate-y-0.5 scale-105 inline" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 7v14" />
+                <path d="M9 18l3 3l3 -3" />
+                <path d="M12 7a2 2 0 1 0 0 -4a2 2 0 0 0 0 4" />
+            </svg>
+        </p>
+        <p class="text-2xl lg:text-3xl font-light max-w-200">
+            Proyectamos tus ideas con creatividad y precisión. Desde el anteproyecto hasta el legajo técnico, diseñamos
+            espacios únicos, funcionales y listos para ser construidos.
+        </p>
+    </div>
+</section>
+
+
+
+<section id="contacto" class="relative overflow-hidden text-base-50 w-lvw min-h-lvh">
+    <div class="text-xl px-responsive py-10 text-end">
+        <p>#contacto</p>
+    </div>
+    <div class="flex flex-col items-center gap-8 px-responsive">
+        <picture>
+            <source srcset="/static/img/eyc-logo-completo.svg" type="image/svg+xml">
+            <img src="/static/img/eyc-logo-completo.png" alt="Logo de la compañía" class="w-60 lg:w-90">
+        </picture>
+        <div class="flex flex-col items-center gap-4 uppercase">
+            <p class="text-3xl lg:text-5xl font-medium text-center max-w-200">
+                ¿Tenés un proyecto en mente?
+            </p>
+            <p class="text-xl lg:text-3xl font-light text-center max-w-200">
+                Te asesoramos personalmente para convertir esa idea en una obra real!
+            </p>
+        </div>
+    </div>
+    <div class="px-responsive grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 py-16 uppercase">
+        <div class="flex flex-col gap-8">
+            <div class="">
+                <p class="text-base-500 font-light text-xl pb-2">
+                    Nuestras Redes Sociales
+                </p>
+                <p>
+                    <a href="" class="text-2xl lg:text-3xl pb-1 cursor-pointer hover:text-base-400 transition-colors">
+                        Instagram
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="text-2xl lg:text-3xl pb-1 cursor-pointer hover:text-base-400 transition-colors">
+                        Facebook
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="text-2xl lg:text-3xl cursor-pointer hover:text-base-400 transition-colors">
+                        WhatsApp
+                    </a>
+                </p>
+            </div>
+            <div class="">
+                <p class="text-base-500 font-light text-xl pb-2">
+                    Encontranos en
+                </p>
+                <p>
+                    <a href="" class="text-2xl lg:text-3xl cursor-pointer hover:text-base-400 transition-colors">
+                        Google Maps
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8">
+            <div class="">
+                <p class="text-base-500 font-light text-xl pb-2">
+                    Email
+                </p>
+                <p>
+                    <a href="" class="text-2xl lg:text-3xl cursor-pointer hover:text-base-400 transition-colors">
+                        eycconstrucciones@gmail.com
+                    </a>
+                </p>
+            </div>
+            <div class="">
+                <p class="text-base-500 font-light text-xl pb-2">
+                    Teléfono
+                </p>
+                <p>
+                    <a href="" class="text-2xl lg:text-3xl cursor-pointer hover:text-base-400 transition-colors">
+                        364 - 400 0000
+                    </a>
+                </p>
+            </div>
+            <div class="">
+                <p class="text-base-500 font-light text-xl pb-2">
+                    Nuestros Horarios
+                </p>
+                <p class="text-2xl lg:text-3xl">
+                    Lun. a Vie. de 7 a 12 y de 15 a 19
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="relative h-120 w-lvw uppercase">
+        <p class="h-120 z-10 flex items-end absolute text-xl lg:text-3xl text-shadow-lg max-w-200 px-responsive py-10">
+            Somos un equipo comprometido con la transparencia, el trato directo y la calidad en cada metro cuadrado que construimos.
+        </p>
+        <img class="w-full h-full object-cover brightness-75"
+            src="/static/img/temp/smkn-1-gantar-nlXv_JCfSHc-unsplash.jpg" alt="">
+    </div>
+</section>
+
+
+
+<section id="footer" class="relative bg-base-50 text-base-500 w-lvw">
+    <div class="text-xl px-responsive py-10 grid gap-8 grid-cols-1 lg:grid-cols-2 lg:items-center">
+        <p>© 2026 E&amp;C Constructora</p>
+        <div class="lg:text-end">
+            <p>
+                RN 16, Colectora Sur e/ 30 y 32
+            </p>
+            <p>
+                Presidencia Roque Sáenz Peña, Chaco
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+        // Basic Carousel
+        (() => {
+            for (let el of document.getElementsByClassName("basic-carousel")) {
+                document.addEventListener("DOMContentLoaded", () => {
+                    el.basicCarouselWidth = 0;
+                    el.basicCarouselDisplacement = 0;
+                    el.basicCarouselStep = 1;
+                    el.basicCarouselPaused = false;
+                    // duplicate elements and count width
+                    const children = Array.from(el.children);
+                    children.forEach(child => {
+                        el.basicCarouselWidth += child.getBoundingClientRect().width;
+                        const clone = child.cloneNode(true);
+                        el.appendChild(clone);
+                    });
+                    const resize = () => {
+                        el.basicCarouselStep = 2 - el.getBoundingClientRect().width / 2000.0;
+                    }
+                    window.addEventListener("resize", resize);
+                    resize();
+                    el.onclick = () => { el.basicCarouselPaused = !el.basicCarouselPaused; };
+                    const animate = () => {
+                        if (!el.basicCarouselPaused) {
+                            el.basicCarouselDisplacement += el.basicCarouselStep;
+                            if (el.basicCarouselDisplacement > el.basicCarouselWidth) {
+                                el.basicCarouselDisplacement = 0;
+                            }
+                            el.style.transform = `translateX(-${el.basicCarouselDisplacement}px)`;
+                        }
+                        window.requestAnimationFrame(animate)
+                    };
+                    animate();
+                });
+            }
+        })()
+</script>
