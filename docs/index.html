@@ -84,7 +84,7 @@
 				</div>
 			</div>
 			<nav id="menu" class="w-full h-full px-responsive pb-[6lvh]">
-				<ul class="flex flex-col h-full justify-evenly items-center text-[5lvh] lg:text-[9lvh] uppercase">
+				<ul class="flex flex-col h-full justify-evenly items-center text-[4lvh] lg:text-[8lvh] uppercase">
 					<li><a href="/#inicio" class="text-link max-w-lvw" onclick="toggleHeaderMenu()"> Inicio </a></li>
 					<li><a href="/#construccion" class="text-link max-w-lvw" onclick="toggleHeaderMenu()"> Construcción </a></li>
 					<li><a href="/#metalurgica" class="text-link max-w-lvw" onclick="toggleHeaderMenu()"> Metalúrgica </a></li>
@@ -177,14 +177,17 @@
 				</div>
 			</div>
 			<div id="inicio-title-container" class="absolute w-lvw h-lvh z-10 flex justify-center items-center px-[10vw] py-28">
-				<p class="text-center text-5xl lg:text-7xl font-semibold text-shadow-lg uppercase">Construimos tu visión con solidez y excelencia</p>
+				<p class="text-center text-3xl lg:text-7xl font-semibold text-shadow-lg uppercase">Construimos tu visión con solidez y excelencia</p>
 			</div>
 			<div id="inicio-media-container" class="relative w-lvw h-lvh">
-				<video class="relative w-full h-full object-cover" autoplay muted loop preload="auto" poster="poster.jpg">
-					<source src="https://ezenicofogar.github.io/eycstatic/static/video/hero.av1.mkv" type='video/webm; codecs="av01.0.05M.08"' />
-					<source src="https://ezenicofogar.github.io/eycstatic/static/video/hero.h264.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-					Tu navegador no soporta HTML5 video.
-				</video>
+				<div class="relative w-full h-full">
+					<img class="absolute w-full h-full object-cover" src="http://localhost:8080/static/img/lowQualityLoading.jpg" alt="" />
+					<video class="relative w-full h-full object-cover" autoplay muted loop preload="auto" poster="http://localhost:8080/static/img/lowQualityLoading.jpg">
+						<source src="http://localhost:8080/static/video/hero.av1.mkv" type='video/webm; codecs="av01.0.05M.08"' />
+						<source src="http://localhost:8080/static/video/hero.h264.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+						Tu navegador no soporta HTML5 video.
+					</video>
+				</div>
 			</div>
 		</section>
 

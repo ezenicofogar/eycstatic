@@ -3,8 +3,6 @@ layout: site.html
 title: "Inicio"
 ---
 
-
-
 <section id="inicio" class="text-base-50 pointer-events-none">
   <div class="absolute w-lvw h-lvh flex flex-col justify-end">
     <div class="px-responsive pb-10 flex justify-between text-xl font-light uppercase">
@@ -36,20 +34,21 @@ title: "Inicio"
     </div>
   </div>
   <div id="inicio-title-container" class="absolute w-lvw h-lvh z-10 flex justify-center items-center px-[10vw] py-28">
-    <p class="text-center text-5xl lg:text-7xl font-semibold text-shadow-lg uppercase">
+    <p class="text-center text-3xl lg:text-7xl font-semibold text-shadow-lg uppercase">
       Construimos tu visión con solidez y excelencia
     </p>
   </div>
   <div id="inicio-media-container" class="relative w-lvw h-lvh">
-    <video class="relative w-full h-full object-cover" autoplay muted loop preload="auto" poster="poster.jpg">
-      <source src="{{ hostWebsiteDomain }}static/video/hero.av1.mkv" type='video/webm; codecs="av01.0.05M.08"' />
-      <source src="{{ hostWebsiteDomain }}static/video/hero.h264.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-      Tu navegador no soporta HTML5 video.
-    </video>
+    <div class="relative w-full h-full">
+      <img class="absolute w-full h-full object-cover" src="{{ hostWebsiteDomain }}static/img/lowQualityLoading.jpg" alt="">
+      <video class="relative w-full h-full object-cover" autoplay muted loop preload="auto" poster="{{ hostWebsiteDomain }}static/img/lowQualityLoading.jpg">
+        <source src="{{ hostWebsiteDomain }}static/video/hero.av1.mkv" type='video/webm; codecs="av01.0.05M.08"' />
+        <source src="{{ hostWebsiteDomain }}static/video/hero.h264.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        Tu navegador no soporta HTML5 video.
+      </video>
+    </div>
   </div>
 </section>
-
-
 
 <section id="construccion" class="relative bg-base-50 text-base-800 w-lvw min-h-lvh">
   <div class="text-xl px-responsive py-10">
@@ -123,8 +122,6 @@ title: "Inicio"
     </p>
   </div>
 </section>
-
-
 
 <section id="metalurgica" class="relative overflow-hidden text-base-50 w-lvw min-h-lvh">
   <video class="absolute -z-10 w-full h-150 object-cover object-bottom" autoplay muted loop preload="auto"
@@ -201,8 +198,6 @@ title: "Inicio"
   </div>
 </section>
 
-
-
 <section id="arquitectura" class="relative bg-base-50 text-base-800 w-lvw min-h-lvh">
   <div class="text-xl px-responsive py-10">
     <p>#arquitectura</p>
@@ -275,8 +270,6 @@ title: "Inicio"
     </p>
   </div>
 </section>
-
-
 
 <section id="contacto" class="relative overflow-hidden text-base-50 w-lvw min-h-lvh">
   <div class="text-xl px-responsive py-10 text-end">
