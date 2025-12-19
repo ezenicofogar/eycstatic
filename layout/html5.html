@@ -1,5 +1,5 @@
 ---
-metaHostWebpage: "http://localhost:8080/"
+hostWebsiteDomain: "http://localhost:8080/"
 metaPhoneNumber: "364 - 416 0605"
 metaPhoneNumberPlain: "+543644160605"
 metaEmail: "eycconstruccionesss@gmail.com"
@@ -9,7 +9,6 @@ metaWhatsappLink: "https://wa.me/5493644160605?text=Hola%2C%20quisiera%20consult
 metaSocialMediaImage: "http://localhost:8080/static/img/eycSocialMedia.png"
 metaGeneralMediaImage: "http://localhost:8080/static/img/eycSocialMedia.png"
 ---
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,9 +23,9 @@ metaGeneralMediaImage: "http://localhost:8080/static/img/eycSocialMedia.png"
 
   <meta name="description"
     content="Empresa constructora en Sáenz Peña, Chaco. Expertos en obras civiles, naves industriales, estructuras metálicas y proyectos de arquitectura llave en mano.">
-  <meta rel="canonical" href="{{ metaHostWebpage }}">
+  <meta rel="canonical" href="{{ hostWebsiteDomain }}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ metaHostWebpage }}">
+  <meta property="og:url" content="{{ hostWebsiteDomain }}">
   <meta property="og:title" content="E&C Constructora - Construimos tu visión">
   <meta property="og:description"
     content="Soluciones integrales en construcción, metalúrgica y arquitectura. Calidad y solidez en Chaco.">
@@ -37,15 +36,15 @@ metaGeneralMediaImage: "http://localhost:8080/static/img/eycSocialMedia.png"
   <meta name="twitter:description" content="Obras civiles y estructuras metálicas en el norte argentino.">
   <meta name="twitter:image" content="{{ metaSocialMediaImage }}">
 
-  <link rel="icon" href="/static/img/favicon/favicon-light.ico" media="(prefers-color-scheme: light)">
-  <link rel="icon" href="/static/img/favicon/favicon-dark.ico" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="/static/img/favicon/eycisopositive-64.png" sizes="64x64" type="image/png"
+  <link rel="icon" href="{{ hostWebsiteDomain }}static/img/favicon/favicon-light.ico" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="{{ hostWebsiteDomain }}static/img/favicon/favicon-dark.ico" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="{{ hostWebsiteDomain }}static/img/favicon/eycisopositive-64.png" sizes="64x64" type="image/png"
     media="(prefers-color-scheme: light)">
-  <link rel="icon" href="/static/img/favicon/eycisonegative-64.png" sizes="64x64" type="image/png"
+  <link rel="icon" href="{{ hostWebsiteDomain }}static/img/favicon/eycisonegative-64.png" sizes="64x64" type="image/png"
     media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="/static/img/favicon/eycisopositive.svg" type="image/svg+xml"
+  <link rel="icon" href="{{ hostWebsiteDomain }}static/img/favicon/eycisopositive.svg" type="image/svg+xml"
     media="(prefers-color-scheme: light)">
-  <link rel="icon" href="/static/img/favicon/eycisonegative-64.png" type="image/svg+xml"
+  <link rel="icon" href="{{ hostWebsiteDomain }}static/img/favicon/eycisonegative-64.png" type="image/svg+xml"
     media="(prefers-color-scheme: dark)">
 
   <meta name="geo.region" content="AR-H">
@@ -56,15 +55,15 @@ metaGeneralMediaImage: "http://localhost:8080/static/img/eycSocialMedia.png"
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/lenis.css">
-  <link rel="stylesheet" href="/static/css/tailwind.css">
-  <script src="/static/js/lenis.min.js"></script>
-  <script src="/static/js/gsap.min.js"></script>
-  <script src="/static/js/ScrollTrigger.min.js"></script>
-  <script src="/static/js/gsaplenissetup.js"></script>
+  <link rel="stylesheet" href="{{ hostWebsiteDomain }}static/css/lenis.css">
+  <link rel="stylesheet" href="{{ hostWebsiteDomain }}static/css/tailwind.css">
+  <script src="{{ hostWebsiteDomain }}static/js/lenis.min.js"></script>
+  <script src="{{ hostWebsiteDomain }}static/js/gsap.min.js"></script>
+  <script src="{{ hostWebsiteDomain }}static/js/ScrollTrigger.min.js"></script>
+  <script src="{{ hostWebsiteDomain }}static/js/gsaplenissetup.js"></script>
 
   <script
-    type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","name":"E&C Constructora","image":"{{ metaGeneralMediaImage }}","@id":"{{ metaHostWebpage }}","url":"{{ metaHostWebpage }}","telephone":"{{ metaPhoneNumberPlain }}","email":"{{ metaEmail }}","address":{"@type":"PostalAddress","streetAddress":"RN 16, Colectora Sur e/ 30 y 32","addressLocality":"Presidencia Roque Sáenz Peña","addressRegion":"Chaco","postalCode":"H3700","addressCountry":"AR"},"geo":{"@type":"GeoCoordinates","latitude":-26.80068704948688,"longitude":-60.45913050939227},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"15:00","closes":"19:00"}],"sameAs":["{{ metaInstagramLink }}","{{ metaFacebookLink }}"],"priceRange":"$$"}</script>
+    type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","name":"E&C Constructora","image":"{{ metaGeneralMediaImage }}","@id":"{{ hostWebsiteDomain }}","url":"{{ hostWebsiteDomain }}","telephone":"{{ metaPhoneNumberPlain }}","email":"{{ metaEmail }}","address":{"@type":"PostalAddress","streetAddress":"RN 16, Colectora Sur e/ 30 y 32","addressLocality":"Presidencia Roque Sáenz Peña","addressRegion":"Chaco","postalCode":"H3700","addressCountry":"AR"},"geo":{"@type":"GeoCoordinates","latitude":-26.80068704948688,"longitude":-60.45913050939227},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"15:00","closes":"19:00"}],"sameAs":["{{ metaInstagramLink }}","{{ metaFacebookLink }}"],"priceRange":"$$"}</script>
 </head>
 
 <body class="relative bg-base-800 overflow-x-hidden">
