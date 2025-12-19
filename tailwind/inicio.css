@@ -1,9 +1,9 @@
 @layer components {
     #inicio-media-container {
-        animation: inicio-video-animation 1.5s ease-in-out 1.5s 1 normal both running;
+        animation: inicio-video-animation 1.5s ease-in-out 3.5s 1 normal both running;
     }
     #inicio-title-container {
-        animation: inicio-title-animation 1.5s ease-out 3s 1 normal both running;
+        animation: inicio-title-animation 1.5s ease-out 5s 1 normal both running;
     }
 }
 
