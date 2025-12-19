@@ -9,10 +9,15 @@
 
 @keyframes inicio-video-animation {
     from {
+        z-index: 50;
         filter: none;
         padding: 0 0;
     }
+    99% {
+        z-index: 50;
+    }
     to {
+        z-index: 0;
         filter: brightness(80%);
         padding: 7rem 7vw;
     }

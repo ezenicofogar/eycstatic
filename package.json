@@ -9,16 +9,23 @@
     "watch:11ty": "pnpx @11ty/eleventy --serve",
     "build:11ty": "pnpx @11ty/eleventy",
     "watch": "concurrently --names \"TW,11TY\" \"pnpm run watch:css\" \"pnpm run watch:11ty\"",
-    "build": "pnpm run build:css && pnpm run build:11ty"
+    "build": "pnpm run build:css && pnpm run build:11ty",
+    "legacy:watch:css": "npx @tailwindcss/cli -i ./tailwind.input.css -o ./static/css/tailwind.css --watch",
+    "legacy:build:css": "npx @tailwindcss/cli -i ./tailwind.input.css -o ./static/css/tailwind.css --minify",
+    "legacy:watch:11ty": "npx @11ty/eleventy --serve",
+    "legacy:build:11ty": "npx @11ty/eleventy",
+    "legacy:watch": "concurrently --names \"TW,11TY\" \"npm run legacy:watch:css\" \"npm run legacy:watch:11ty\"",
+    "legacy:build": "npm run legacy:build:css && npm run legacy:build:11ty"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.25.0",
+  "packageManager": "pnpm@10.26.1",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@tailwindcss/cli": "^4.1.17",
     "concurrently": "^9.2.1",
+    "prettier": "^3.7.4",
     "tailwindcss": "^4.1.17"
   },
   "type": "module"

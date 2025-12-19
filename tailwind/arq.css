@@ -1,0 +1,24 @@
+@layer components {
+    #arq-image-1 {
+        animation: arq-image-animation-1 8s linear 0s infinite normal both running;
+    }
+    #arq-image-2 {
+        animation: arq-image-animation-2 8s linear 0s infinite normal both running;
+    }
+}
+
+@keyframes arq-image-animation-1 {
+    0%   { opacity: 0%; }
+    23%  { opacity: 0%; }
+    33%  { opacity: 100%; }
+    56%  { opacity: 100%; }
+    66%  { opacity: 0%; }
+    100% { opacity: 0%; }
+}
+@keyframes arq-image-animation-2 {
+    0%   { opacity: 0%; }
+    56%  { opacity: 0%; }
+    66%  { opacity: 100%; }
+    90%  { opacity: 100%; }
+    100% { opacity: 0%; }
+}

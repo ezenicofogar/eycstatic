@@ -1,9 +1,4 @@
-/* 
- * HEADER SECTION
-*/
-
 @layer components {
-
     #header {
         position: fixed;
         display: grid;
@@ -28,11 +23,9 @@
     #header.hide:not(.opened) {
         transform: translateY(-6rem);
     }
-
     #header #navbar {
         height: 6rem;
     }
-    
     #header #menu {
         transition-property: opacity;
         transition-timing-function: var(--default-transition-timing-function);
