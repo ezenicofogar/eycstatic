@@ -41,9 +41,9 @@ title: "Inicio"
   <div id="inicio-media-container" class="relative w-lvw h-lvh">
     <div class="relative w-full h-full">
       <img class="absolute w-full h-full object-cover" src="{{ hostWebsiteDomain }}static/img/lowQualityLoading.jpg" alt="">
-      <video class="relative w-full h-full object-cover" autoplay muted loop preload="auto" poster="{{ hostWebsiteDomain }}static/img/lowQualityLoading.jpg">
-        <source src="{{ hostWebsiteDomain }}static/video/hero.av1.mkv" type='video/webm; codecs="av01.0.05M.08"' />
-        <source src="{{ hostWebsiteDomain }}static/video/hero.h264.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      <video class="relative w-full h-full object-cover" autoplay playsinline muted loop preload="auto" poster="{{ hostWebsiteDomain }}static/img/lowQualityLoading.jpg">
+        <source src="{{ hostWebsiteDomain }}static/video/Hero.mkv" type='video/mkv; codecs="av01.0.05M.08"' />
+        <source src="{{ hostWebsiteDomain }}static/video/Hero.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         Tu navegador no soporta HTML5 video.
       </video>
     </div>
@@ -64,9 +64,58 @@ title: "Inicio"
         Contactanos
       </a>
     </div>
-    <div class="order-1 lg:order-2">
-      <img class="w-full object-contain" src="{{ hostWebsiteDomain }}static/img/construction.png" alt="">
+    <div class="order-1 lg:order-2 relative w-full aspect-4/3" id="construccion-model-container">
+      {% for i in (1..32) %}
+      <img class="absolute w-full h-full object-cover hidden" id="construccion-model-{{ i }}"
+      src="{{ hostWebsiteDomain }}static/img/cons/model/{{ i | zeroNumber:4 }}.jpg" alt="">
+      {% endfor %}
     </div>
+    <script>
+      const construccionModelsCount = 32;
+      const construccionModelsContainer = document.getElementById("construccion-model-container");
+      const construccionModels = [];
+      let construccionModelsActualFrame = 0;
+      for (let i = 1; i <= construccionModelsCount; i++) {
+        construccionModels.push(
+          document.getElementById(`construccion-model-${ i }`)
+        );
+      }
+      gsap.fromTo(
+        "html",
+        { "--construccion-model-frame": 0 },
+        {
+          "--construccion-model-frame": construccionModelsCount,
+          scrollTrigger: {
+            trigger: "#construccion-model-container",
+            start: "top bottom",
+            end: "bottom top",
+            // markers: true,
+            scrub: true
+          },
+          ease: "none"
+        }
+      );
+      function clamp(num, min, max) {
+        return Math.min(Math.max(num, min), max);
+      }
+      const construccionModelsUpdateFrame = ()=>{
+        construccionModels.forEach((m)=>{m.classList.add("hidden")});
+        construccionModels[construccionModelsActualFrame].classList.remove("hidden");
+        // console.log(actualFrame);
+      };
+      const construccionModelsRequestFrame = ()=>{
+        const styles = window.getComputedStyle(document.documentElement);
+        let numer = Math.floor(clamp(styles.getPropertyValue("--construccion-model-frame") / 1,
+        0, construccionModelsCount - 1));
+        if (numer !== construccionModelsActualFrame) {
+          construccionModelsActualFrame = numer;
+          construccionModelsUpdateFrame();
+        }
+        window.requestAnimationFrame(construccionModelsRequestFrame);
+      };
+      construccionModelsUpdateFrame();
+      window.requestAnimationFrame(construccionModelsRequestFrame);
+    </script>
   </div>
   <div class="pl-responsive py-10">
     <div class="grid grid-cols-[2rem_1fr] lg:grid-cols-[3rem_1fr] h-120 w-full">
@@ -149,16 +198,13 @@ title: "Inicio"
     <div class="grid grid-cols-[1fr_2rem] lg:grid-cols-[1fr_3rem] h-120 w-full">
       <div class="relative overflow-hidden h-full">
         <div class="basic-carousel h-full flex">
-          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/temp/ivan-henao-JdAaF_cN71k-unsplash.jpg"
-            alt="">
-          <img class="h-full pr-4 aspect-square object-cover"
-            src="{{ hostWebsiteDomain }}static/img/temp/daniel-fazio-mnHXMWbcnhE-unsplash.jpg" alt="">
-          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/temp/liam-maart-MlYCn6yVzA4-unsplash.jpg"
-            alt="">
-          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/temp/ivan-henao-2DK-CP_WAuw-unsplash.jpg"
-            alt="">
-          <img class="h-full pr-4 aspect-square object-cover"
-            src="{{ hostWebsiteDomain }}static/img/temp/zoshua-colah-AdqTYojtOnc-unsplash.jpg" alt="">
+          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/temp/zoshua-colah-AdqTYojtOnc-unsplash.jpg" alt="">
+          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/met/001.jpg" alt="">
+          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/met/004.jpg" alt="">
+          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/temp/liam-maart-MlYCn6yVzA4-unsplash.jpg" alt="">
+          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/met/002.jpg" alt="">
+          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/met/003.jpg" alt="">
+          <img class="h-full pr-4 aspect-square object-cover" src="{{ hostWebsiteDomain }}static/img/temp/daniel-fazio-mnHXMWbcnhE-unsplash.jpg" alt="">
         </div>
       </div>
       <div class="flex flex-col justify-between items-end">

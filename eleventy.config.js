@@ -20,4 +20,8 @@ export default async function (eleventyConfig) {
         }
         return content;
     });
+    eleventyConfig.addLiquidFilter("zeroNumber",
+        function (number, zeros) {
+            return number.toString().padStart(zeros, "0");
+    });
 };
